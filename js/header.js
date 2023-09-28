@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 */
 
-// LES CONST POUR ACTIONNER BUTTON
+/* LES CONST POUR ACTIONNER BUTTON
 const signupButton = document.getElementById("log-in-button");
 const formSignUp = document.getElementById("idBtnLogIn");
 const loginButton = document.getElementById("log-in-button");
@@ -83,6 +83,7 @@ window.addEventListener("click", function (event) {
     formLogIn.style.display = "none";
   }
 });
+*/
 
 // ---------FUNCTION APPARITION FORM LOG-IN--------------//
 

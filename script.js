@@ -59,9 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 
 // LES CONST POUR ACTIONNER BUTTON
+const signupButton = document.getElementById("log-in-button");
+const formSignUp = document.getElementById("idBtnLogIn");
 const loginButton = document.getElementById("log-in-button");
 const formLogIn = document.getElementById("idBtnLogIn");
 const closeButton = document.getElementById("closeButton");
+
+// ---------FUNCTION APPARITION FORM SIGN-UP--------------//
 
 // BUTTON CLICKER, FAIT APP LE FORM
 loginButton.addEventListener("click", function () {
@@ -77,5 +81,27 @@ closeButton.addEventListener("click", function () {
 window.addEventListener("click", function (event) {
   if (event.target === formLogIn) {
     formLogIn.style.display = "none";
+  }
+});
+
+// ---------FUNCTION APPARITION FORM LOG-IN--------------//
+
+// BUTTON CLICKER, FAIT APP LE FORM
+loginButton.addEventListener("click", function () {
+  formLogIn.style.display = "block";
+  console.log("apparition formulaire");
+});
+
+// QUAND LE BUTTON FERMER CLICK, CACHE LE FORM
+closeButton.addEventListener("click", function () {
+  formLogIn.style.display = "none";
+  console.log("fermeture formulaire");
+});
+
+// CLICK AUTRE PART QUE LA CROIX --> FERME LE FORM
+window.addEventListener("click", function (event) {
+  if (event.target === formLogIn) {
+    formLogIn.style.display = "none";
+    console.log("fermeture alternative");
   }
 });

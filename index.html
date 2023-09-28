@@ -3,7 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/form-log-in-style.css" rel="stylesheet"/>
+    <title>Wild Eats</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div id="logo-header">
+          <img src="......" alt="Logo Wild Eats" />
+        </div>
+        <div class="log-in">
+          <div>
+            <button id="sign-up-button">S'inscrire</button>
+           <div>
+            <button id="log-in-button">Connexion</button>
+
+            <div id="idBtnLogIn" class="pop-up">
+              
+              <div class="form-log-in-content">
+               
+                <span id="closeButton"  title="Close Modal">&times;</span>
+
+                 <!-- FORMULAIRE LOG-IN-->
+
+                <form method="post" action="" class="form-aspect">
+                    <div class="form-log-in">
+                        <div class="form-column">
+                            <label id="label-email" for="email">Email</label>
+                            <input type="email" placeholder="Entrez votre email"   name="email" id="email" required/>
+                        </div>
+                        <div class="form-column">
+                            <label id="label-mdp" for="mdp">Mot de passe</label>
+                            <input type="password" placeholder="Entrez votre mot de passe" name="mdp" required>
+                        </div>
+                        <div>
+                            <button id="btnFormLogIn" type="submit">Se connecter</button>
+                        </div>
+                        <div>
+                            <label id="checkbox-form">
+                            <input type="checkbox" checked="checked" name="remember">Se rappeler de moi 
+                        </label>
+                        </div>
+                    </div>
+                      </form>  
+            
+          </div>
+        </div>
+    </header>
+    <main>
+      <div>
+        <h1>Welcome</h1>
+      </div>
+      <div class="button-filters">
+        <button type="button" id="btnType">Type</button>
+        <button type="button" id="btnPrice">Prix</button>
+        <button type="button" id="btnDistance">Distance</button>
+      </div>
+      <div class="article-restaurant">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+      </div>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iure,
+          corporis obcaecati atque odio saepe, perspiciatis quas molestias eius
+          laudantium sequi minus. Et sint doloribus optio! Repudiandae quisquam
+          rem optio!
+        </p>
+      </div>
+    </main>
+    <footer>
+      <img src="..." alt="Logo Wild Eats" />
+      <div>
+        <a target="_blank" href="https://twitter.com/" class="lien-icone">
+          <img src="images/twitter.png" alt="Logo Twitter" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
+          <img src="images/instagram.png" alt="Logo Instagram" />
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

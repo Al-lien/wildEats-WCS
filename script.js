@@ -57,3 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
 */
+
+// LES CONST POUR ACTIONNER BUTTON
+const loginButton = document.getElementById("log-in-button");
+const formLogIn = document.getElementById("idBtnLogIn");
+const closeButton = document.getElementById("closeButton");
+
+// BUTTON CLICKER, FAIT APP LE FORM
+loginButton.addEventListener("click", function () {
+  formLogIn.style.display = "block";
+});
+
+// QUAND LE BUTTON FERMER CLICK, CACHE LE FORM
+closeButton.addEventListener("click", function () {
+  formLogIn.style.display = "none";
+});
+
+// CLICK AUTRE PART QUE LA CROIX --> FERME LE FORM
+window.addEventListener("click", function (event) {
+  if (event.target === formLogIn) {
+    formLogIn.style.display = "none";
+  }
+});

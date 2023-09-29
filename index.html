@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="styles/header.css" rel="stylesheet"/>
+   <!--
+    <link href="style/form-log-in-style.css" rel="stylesheet"/>
+    <link href="style/form-sign-up-style.css" rel="stylesheet"/> 
+--> 
+    <title>Wild Eats</title>
+  </head>
+  <body>
+
+    <!-- SECTION HEADER CONTENANT LOGO, BOUTON D'INSCRIPTION ET UN FORMULAIRE EN POP-UP -->
+    <section class="header">
+        <header>
+            <nav class="nav">
+                <div id="logo-header">
+                    <img src="......" alt="Logo Wild Eats" />
+                </div>
+                
+                <div class=" info-button">
+
+                    <button id="sign-up-button">S'inscrire</button>
+                    <button id="log-in-button">Connexion</button>
+                
+                </div>
+
+                <!-- <span id="closeButton"  title="Close Modal">&times;</span> fermeture desktop à finir-->
+
+                <!----------------------FORMULAIRE SIGN UP------------------------>
+                <div id="idBtnSignUp" class="pop-in">
+                    <div class="form-log-in-content">
+                        
+                        <span id="closeButton" title="Close Modal">&times;</span>
+                  
+                        <form class="form-sign-up-aspect " action="">
+                            <div class="description-sign-up form-sign-up">
+                                <h1>Inscription</h1>
+                                <p>Veuillez remplir les informations pour créer un compte.</p>
+                                <hr />
+                                <div class="form-column-sign-up">
+                                    <label for="email">Email</label>
+                                    <input type="email" placeholder="Enter Email" name="email" required />
+                                
+                                
+                                
+                                    <label for="mdp-sign-up">Mot de passe</label>
+                                    <input type="password"  placeholder="Entrer Mot de passe" name="mdp-sign-up" required/>
+                                
+                    
+                                
+                                    <label for="reecrire-mdp">Réecrire mot de passe</label>
+                                    <input type="password" placeholder="Entrer Mot de passe" name="reecrire-mdp" required  />
+                                
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px"/>                              
+                                        Se rappeler de moi
+                                    </label>
+
+                                    <div class="clearfix">
+                                        <button id="buttonFormSignUp" type="submit" class="signupbtn">
+                                            S'inscrire
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                      </div>
+
+
+
+                </div>
+                <!--------------------- FORMULAIRE LOG-IN------------------------->
+                <div id="idBtnLogIn" class="pop-in">
+                    <div class="form-log-in-content">
+
+                        <form method="post" action="" class="form-aspect">
+                            <div class="form-log-in">
+                                <div class="form-column">
+                                    <label id="label-email" for="email">Email</label>
+                                    <input type="email" placeholder="Entrez votre email"   name="email" id="email" required/>
+                                    
+                                    <div class="form-column">
+                                        <label id="label-mdp" for="mdp">Mot de passe</label>
+                                        <input type="password" placeholder="Entrez votre mot de passe" name="mdp" required>
+                                    </div>
+                                    <div>
+                                        <label id="checkbox-form">
+                                            <input type="checkbox" checked="checked" name="remember"/>Se rappeler de moi 
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <button id="btnFormLogIn" type="submit">Se connecter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form> 
+
+                    </div> 
+                </div>
+
+                </div>
+                </nav>
+          </header>
+    </section>
+
+    <!-- SECTION MENU CONTENANT UN CARROUSEL HORIZONTAL DES DIFFERENTS RESTAURANT -->
+    <section class="menu" id="menu-id">
+     
+    <main id="menu__container-id" class="menu__container">
+
+     <!-- <div class="wrapper resizeable">
+
+              <article class="menu__cardRestaurant">
+                
+                <div class="menu__card-picture"> </div>
+                
+                <div class="menu__card-body">
+                  <div class="cardBodyTitle">
+                    <h2 class="restaurantName"></h2>
+                    <h3 class="restaurantType"></h3>
+                  </div>
+                </div>
+                
+              </article>  
+
+              <article class="menu__cardMap"></article>  
+
+          </div> -->
+
+      </main>
+    </section>
+    
+    <!-- SECTION MENU CONTENANT UN CARROUSEL HORIZONTAL DES DIFFERENTES MAPS -->
+    <section class="map"></section>
+
+    <!-- SECTION FOOTER CONTENANT LOGO, LIEN VERS LES RESEAUX SOCIAUX, ET LISTE DES CONTACTS -->
+
+    <section class="footer">
+        <footer>
+            <img src="..." alt="Logo Wild Eats" />
+            <div>
+              <a target="_blank" href="https://twitter.com/" class="lien-icone">
+                <img src="images/twitter.png" alt="Logo Twitter" />
+              </a>
+              <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
+                <img src="images/instagram.png" alt="Logo Instagram" />
+              </a>
+            </div>
+          </footer>
+         
+    </section>
+    <script src="js/data.js"></script>
+    <script src="js/header.js"></script>
+     <script src="js/menu.js"></script>
+    <!-- <script src="js/map.js"></script> -->
+    
+</body>
+    
+</html>
+

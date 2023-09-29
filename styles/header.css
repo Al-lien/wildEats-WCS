@@ -1,9 +1,9 @@
 /*------------------ NAV BAR------------------- */
-header {
+.header {
   border: solid 2px blue;
 }
 
-nav {
+.nav {
   border: solid 2px red;
   padding: 3rem;
   padding: 10px;
@@ -49,7 +49,6 @@ button:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }

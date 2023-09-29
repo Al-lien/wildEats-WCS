@@ -24,5 +24,11 @@
   box-sizing: border-box;
   font-family: var(--ff-primary);
   scroll-behavior: smooth;
-}
+  scrollbar-width: none;
 
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow-x: hidden;
+}

@@ -72,7 +72,7 @@ function order(restaurantList) {
     cardBodyValue.appendChild(distanceValue);
 
     //Price value
-    const priceValue = document.createElement("h3");
+    const priceValue = document.createElement("h3"); 
     priceValue.classList.add("card-price");
     priceValue.innerHTML = `${"€".repeat(list.price)}`;
     cardBodyValue.appendChild(priceValue);
@@ -85,53 +85,49 @@ order(restaurantList);
 /* FUNCTIONS */
 
 
-const resizeableElements = document.querySelectorAll('.resizeable'); // Get references to all elements with the "resizeable" class
-let currentlyResized = null; // Track the currently resized element
-const hiddenElements = document.querySelectorAll('.hidden'); // Track the currently hidden element
+const resizeableElements = document.querySelectorAll('.resizeable'); // Appelle tous les elements de classe ".resizeable"
+let currentlyResized = null; // Déclare qu'aucun élement n'est agrandit
 
-// Add a click event listener to each element with .resizeable
-resizeableElements.forEach((element) => {
-  element.addEventListener('click', function () {
 
-    // Check if there's a currently resized element
-    if (currentlyResized !== null) {
 
-      // Remove the "large" class from the currently resized element
-      currentlyResized.classList.remove('large');
-    } else {
+resizeableElements.forEach((element) => { 
+  element.addEventListener('click', function () { // clique sur un élement.
 
-    //Add .large to the new clicked element
-    element.classList.add('large');
     
+    if (currentlyResized !== null) { // Est-ce qu'il y a un autre élement agrandit ?
+
+      
+      currentlyResized.classList.remove('large'); // Si oui, réduit cet élement
+      element.classList.add('large'); // Et agrandit l'élement sur lequel tu as cliqué
     }
 
-    
-     // Update the currently resized element
-    currentlyResized = element; 
+    currentlyResized = element; // l'élement sur lequel tu as cliqué, devient un élement agrandit
   });
 });
 
+const hiddenElements = document.querySelectorAll('.hidden'); // Appelle tous les élements cachés
 resizeableElements.forEach((wrapperElement) => {
   
-    let isLarge = false; 
+    let isLarge = false; // Déclare qu'aucun élement n'est agrandit
     
-    wrapperElement.addEventListener('click', function () {
+    wrapperElement.addEventListener('click', function () { // clique sur un élement.
     
-    if (isLarge) { 
-      wrapperElement.classList.remove('large');
+    if (isLarge) {  
+      wrapperElement.classList.remove('large'); // Si l'élement est agrandit, reduis le
     } else {
-      wrapperElement.classList.add('large');
+      wrapperElement.classList.add('large'); // Sinon agrandis le
     }
 
-    let mapElement = wrapperElement.querySelector(".menu__cardMap");
+    isLarge = !isLarge; // déclare l'élement reduit comme élement agrandis
+    
 
-    if (mapElement.style.opacity == "0") {
-      mapElement.classList.remove('hidden');
+    let mapElement = wrapperElement.querySelector(".menu__cardMap"); // Appelle chaque carte de l'élement sur lequel tu as cliqué
+
+    if (mapElement.style.opacity == "0") { 
+      mapElement.classList.remove('hidden'); // Si l'élement est invisible, enlève la classe invisible
     } else {
-      mapElement.classList.add('show');
+      mapElement.classList.add('show'); // Ajoute la classe visible
     }
-
-    isLarge = !isLarge; // Update the state for this element
   });
 });
 

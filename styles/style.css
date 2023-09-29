@@ -4,6 +4,98 @@
 @import url("footer.css");
 @import url("utils.css");
 
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+/* VARIABLES */
+:root {
+  --clr-fontColor: #333333;
+  --clr-backgroundColor: #fff8f1;
+}
+
+/* BODY */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+  /* Body fit 100% of the html*/
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+  /* Set default font*/
+  font-family: "Sofia Sans", sans-serif;
+  color: var(--clr-fontColor);
+
+  /* Background color */
+  background-color: var(--clr-backgroundColor);
+
+  /* Test*/
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background: linear-gradient(0deg, #fff8f1, #a8e063);
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  background-color: #bbe38f;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-right: 0.5em;
+}
+
+.button-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.filterButton {
+  background-color: #4b923a;
+  width: 3.75rem;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  background: linear-gradient(0deg, #a8e063, #fff8f1);
+  position: absolute;
+  bottom: 0;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lien-icone {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.5em;
 }

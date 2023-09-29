@@ -1,6 +1,10 @@
 /*------------------ NAV BAR------------------- */
+header {
+  border: solid 2px blue;
+}
 
-main nav {
+nav {
+  border: solid 2px red;
   padding: 3rem;
   padding: 10px;
   display: flex;

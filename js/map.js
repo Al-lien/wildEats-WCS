@@ -1,3 +1,5 @@
+console.log("Hello !");
+
 const portfolio = document.querySelector(".portfolio"); // declaring variable of parent div
 
 const restaurantType = ["Japonais", "Libanais", "Venezuelien", "Californien", "Turc", "Français", "Africain"];
@@ -80,7 +82,7 @@ resizeableElements.forEach((element) => { // Add a click event listener to each 
 
 
 
-const orderByPrice = document.querySelector('.btnPrice');
+/* const orderByPrice = document.querySelector('.btnPrice');
 
 orderByPrice.addEventListener("click", orderingByPrice);
 
@@ -90,7 +92,7 @@ function orderingByPrice () {
     order(restaurantList)
  }
 
- order(restaurantList);
+ order(restaurantList); */
 
 
 

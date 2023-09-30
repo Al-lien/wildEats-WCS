@@ -82,61 +82,49 @@ function order(restaurantList) {
 
 order(restaurantList);
 
-/* FUNCTIONS */
+const orderByPrice = restaurantList.sort((e1,e2)=>e1.price-e2.price);
+console.log(orderByPrice);
+
+const orderByPopularity = restaurantList.sort((e1,e2)=>e2.popularity-e1.popularity);
+console.log(orderByPopularity);
+
+const orderByDistance = restaurantList.sort((e1,e2)=>e1.distance-e2.distance);
+console.log(orderByDistance);
+
+/* FUNCTIONS ON CLICK */
 
 
 const resizeableElements = document.querySelectorAll('.resizeable'); // Appelle tous les elements de classe ".resizeable"
-let currentlyResized = null; // Déclare qu'aucun élement n'est agrandit
 
-
-
-resizeableElements.forEach((element) => { 
-  element.addEventListener('click', function () { // clique sur un élement.
-
+/* 
+let currentlyResized = false; // Déclare qu'aucun élement n'est agrandit
+resizeableElements.forEach((wrapperElement) => { 
+  wrapperElement.addEventListener('click', function () { // clique sur un élement.
     
-    if (currentlyResized !== null) { // Est-ce qu'il y a un autre élement agrandit ?
-
-      
+    if (currentlyResized) { // Est-ce qu'il y a un autre élement agrandit ?
       currentlyResized.classList.remove('large'); // Si oui, réduit cet élement
-      element.classList.add('large'); // Et agrandit l'élement sur lequel tu as cliqué
+      wrapperElement.classList.add('large'); // Et agrandit l'élement sur lequel tu as cliqué
     }
 
-    currentlyResized = element; // l'élement sur lequel tu as cliqué, devient un élement agrandit
+    currentlyResized = wrapperElement; // l'élement sur lequel tu as cliqué, devient un élement agrandit
   });
-});
+});  */    
 
-const hiddenElements = document.querySelectorAll('.hidden'); // Appelle tous les élements cachés
 resizeableElements.forEach((wrapperElement) => {
-  
-    let isLarge = false; // Déclare qu'aucun élement n'est agrandit
+    let isFocused = false;
+    let mapElement = wrapperElement.querySelector(".menu__cardMap"); 
+    wrapperElement.addEventListener('click', function display() { 
     
-    wrapperElement.addEventListener('click', function () { // clique sur un élement.
-    
-    if (isLarge) {  
-      wrapperElement.classList.remove('large'); // Si l'élement est agrandit, reduis le
+    if (isFocused && big === 0) {  // Si l'élement est focus : 
+      wrapperElement.classList.remove('large'); // Reduis le
+      mapElement.classList.add('hidden'); // Cache la carte
     } else {
       wrapperElement.classList.add('large'); // Sinon agrandis le
+      mapElement.classList.remove('hidden'); // Montre la carte
     }
 
-    isLarge = !isLarge; // déclare l'élement reduit comme élement agrandis
-    
+    isFocused = !isFocused;
+    console.log(big);
 
-    let mapElement = wrapperElement.querySelector(".menu__cardMap"); // Appelle chaque carte de l'élement sur lequel tu as cliqué
-
-    if (mapElement.style.opacity == "0") { 
-      mapElement.classList.remove('hidden'); // Si l'élement est invisible, enlève la classe invisible
-    } else {
-      mapElement.classList.add('show'); // Ajoute la classe visible
-    }
   });
 });
-
-
-
-
-
-    
- 
-
-
-

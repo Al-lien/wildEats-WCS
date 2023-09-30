@@ -96,8 +96,8 @@ console.log(orderByDistance);
 
 const resizeableElements = document.querySelectorAll('.resizeable'); // Appelle tous les elements de classe ".resizeable"
 
-/* 
-let currentlyResized = false; // Déclare qu'aucun élement n'est agrandit
+
+/* let currentlyResized = false; // Déclare qu'aucun élement n'est agrandit
 resizeableElements.forEach((wrapperElement) => { 
   wrapperElement.addEventListener('click', function () { // clique sur un élement.
     

@@ -113,9 +113,9 @@ resizeableElements.forEach((wrapperElement) => {
 resizeableElements.forEach((wrapperElement) => {
     let isFocused = false;
     let mapElement = wrapperElement.querySelector(".menu__cardMap"); 
-    wrapperElement.addEventListener('click', function display() { 
+    wrapperElement.addEventListener('click', function () { 
     
-    if (isFocused && big === 0) {  // Si l'élement est focus : 
+    if (isFocused) {  // Si l'élement est focus : 
       wrapperElement.classList.remove('large'); // Reduis le
       mapElement.classList.add('hidden'); // Cache la carte
     } else {
@@ -124,7 +124,6 @@ resizeableElements.forEach((wrapperElement) => {
     }
 
     isFocused = !isFocused;
-    console.log(big);
 
   });
 });

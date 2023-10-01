@@ -1,17 +1,16 @@
 /*------------------ NAV BAR------------------- */
-.header {
-  border: solid 2px blue;
-}
+
 
 .nav {
-  border: solid 2px red;
   padding: 3rem;
   padding: 10px;
   display: flex;
+  justify-content: space-between;
 }
 
-#logo-header {
-  flex: 1;
+.logo {
+  width: 3rem;
+  height: auto;
 }
 
 .log-in {
@@ -34,7 +33,9 @@
 #log-in button:nth-child(2) {
   margin-top: 0.5em;
 }
-
+button {
+  margin: 0.5rem;
+}
 button:hover {
   opacity: 1;
 }

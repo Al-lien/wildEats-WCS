@@ -97,7 +97,7 @@ console.log(orderByDistance);
 const resizeableElements = document.querySelectorAll('.resizeable'); // Appelle tous les elements de classe ".resizeable"
 
 
-/*let currentlyResized = false; // Déclare qu'aucun élement n'est agrandit
+  let currentlyResized = false; // Déclare qu'aucun élement n'est agrandit
 resizeableElements.forEach((wrapperElement) => { 
   wrapperElement.addEventListener('click', function () { // clique sur un élement.
     
@@ -108,7 +108,7 @@ resizeableElements.forEach((wrapperElement) => {
 
     currentlyResized = wrapperElement; // l'élement sur lequel tu as cliqué, devient un élement agrandit
   });
-});*/  
+}); 
 
 resizeableElements.forEach((wrapperElement) => {
     let isFocused = false;
@@ -117,10 +117,12 @@ resizeableElements.forEach((wrapperElement) => {
     
     if (isFocused) {  // Si l'élement est focus : 
       wrapperElement.classList.remove('large'); // Reduis le
-      mapElement.classList.add('hidden'); // Cache la carte
+      mapElement.classList.add('hidden');
+ // Cache la carte
     } else {
       wrapperElement.classList.add('large'); // Sinon agrandis le
-      mapElement.classList.remove('hidden'); // Montre la carte
+      mapElement.classList.remove('hidden');
+   // Montre la carte
     }
 
     isFocused = !isFocused;

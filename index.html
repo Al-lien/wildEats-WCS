@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/style.css" rel="stylesheet" />
-    <link href="styles/header.css" rel="stylesheet"/>
-   <!--
-    <link href="style/form-log-in-style.css" rel="stylesheet"/>
-    <link href="style/form-sign-up-style.css" rel="stylesheet"/> 
---> 
+
     <title>Wild Eats</title>
   </head>
   <body>
@@ -16,9 +12,7 @@
     <!-- SECTION HEADER CONTENANT LOGO, BOUTON D'INSCRIPTION ET UN FORMULAIRE EN POP-UP -->
     <section class="header">
             <nav class="nav">
-                <div id="logo-header">
-                    <img src="......" alt="Logo Wild Eats" />
-                </div>
+                    <img class="logo" src="logo.svg" />
                 
                 <div class=" info-button">
 
@@ -105,9 +99,21 @@
                 </nav>
     </section>
 
-    <!-- SECTION MENU CONTENANT UN CARROUSEL HORIZONTAL DES DIFFERENTS RESTAURANT -->
+    <!-- SECTION SEARCH CONTENANT UNE BARRE DE RECHERCHE --> 
+    <section class="search">
+
+        <form class="search__form">
+            <input class="search__form-input" type="search" placeholder="Search...">
+        </form>
+          
+        <aside class="search__title-wrapper">  
+            <h1 class="search__title">Recommended for you </h1>
+            <a class="btn">See all ></a>
+        </aside> 
+    </section>
+    <!-- SECTION MENU CONTENANT UN CARROUSEL HORIZONTAL DES DIFFERENTS RESTAURANT -->   
     <section class="menu" id="menu-id">
-     
+    
     <main id="menu__container-id" class="menu__container">
 
      <!-- <div class="wrapper resizeable">

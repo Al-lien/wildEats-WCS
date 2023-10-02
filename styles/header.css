@@ -8,30 +8,49 @@ nav {
   padding: 3rem;
   padding: 10px;
   display: flex;
-}
-
-#logo-header {
-  flex: 1;
+  background: linear-gradient(0deg, #fff8f1, #a8e063);
 }
 
 .log-in {
   text-align: right;
 }
 
+/*LOGO HEADER*/
+
+#logo-header {
+  flex: 1;
+}
+
+#logo-header img {
+  width: 3.5em;
+  border-radius: 0.5em;
+}
+
 /* BUTTON HEADER*/
+
+.info-button {
+  display: flex;
+  flex-direction: column;
+}
 
 .info-button button {
   text-decoration: none;
   border: hidden;
   border-radius: 5px 5px 5px 5px;
-  display: flex;
   background-color: #bbe38f;
   color: black;
   border-color: rgb(117, 120, 124);
   padding-left: 5px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 10em;
+  height: 1.8em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
 }
 
-#log-in button:nth-child(2) {
+#log-in-button {
   margin-top: 0.5em;
 }
 
@@ -82,16 +101,22 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fefefe;
+  background-color: #fff8f1;
   margin: 5px auto;
   height: 46vw;
   width: 80%;
   border-radius: 10px;
 }
 
+.form-log-in img {
+  width: 5em;
+  border-radius: 10px;
+}
+
 #label-email {
   display: flex;
   padding-top: 0.5em;
+  margin-top: 1em;
 }
 
 input[type="email"] {
@@ -105,6 +130,7 @@ input[type="email"] {
 
 #label-mdp {
   display: flex;
+  margin-top: 1em;
 }
 
 input[type="password"] {
@@ -118,7 +144,32 @@ input[type="password"] {
 
 #checkbox-form {
   display: flex;
+  justify-content: center;
   padding-top: 0.5em;
+}
+
+#btnFormLogIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: hidden;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #bbe38f;
+  color: black;
+  cursor: pointer;
+  margin-top: 1em;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 10em;
+  height: 1.8em;
+}
+
+.btn-se-connecter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ASPECT BUTTON FERMER*/

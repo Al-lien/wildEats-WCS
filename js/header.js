@@ -64,6 +64,7 @@ const formSignUp = document.getElementById("idBtnSignUp");
 const loginButton = document.getElementById("log-in-button");
 const formLogIn = document.getElementById("idBtnLogIn");
 const closeButton = document.getElementById("closeButton");
+const closeButtonLogIn = document.getElementById("closeButtonLogIn");
 
 // ---------FUNCTION APPARITION FORM SIGN-UP--------------//
 
@@ -95,7 +96,7 @@ loginButton.addEventListener("click", function () {
 });
 
 // QUAND LE BUTTON FERMER CLICK, CACHE LE FORM
-closeButton.addEventListener("click", function () {
+closeButtonLogIn.addEventListener("click", function () {
   formLogIn.style.display = "none";
   console.log("fermeture formulaire");
 });

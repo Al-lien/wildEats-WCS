@@ -1,0 +1,21 @@
+footer {
+  padding: 3rem;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #fff8f1, #a8e063);
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+#logo-insta {
+  height: 2em;
+}
+
+#logo-twitter {
+  height: 2em;
+  margin-right: 0.5em;
+}

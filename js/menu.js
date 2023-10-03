@@ -2,9 +2,20 @@ console.log("hello");
 
 /* CREATING ELEMENTS  */
 
-function order(restaurantList) {
-  restaurantList.forEach((list) => {
-  
+function fillRestaurant(array) {
+
+  // recuperer tous les elements contenus dans #menu__container-id
+  const currentElements = document.querySelectorAll("#menu__container-id > div");
+ 
+  // pour chaque element dedans, le supprimer
+
+  currentElements.forEach (function deleteElements(element) {
+    element.remove();
+  }
+  );
+  // ajout des elements contenus dans le tableau array
+  array.forEach((eRestaurant) => {
+
     //Parent div
     const main = document.querySelector(".menu__container");
 
@@ -23,13 +34,13 @@ function order(restaurantList) {
     const menuCardMap = document.createElement("article");
     menuCardMap.classList.add("menu__cardMap");
     menuCardMap.classList.add("hidden");
-    menuCardMap.style.backgroundImage = `url(${list.images.map})`
+    menuCardMap.style.backgroundImage = `url(${eRestaurant.images.map})`
     portfolio.appendChild(menuCardMap);
 
     //Top of the restaurant card
     const menuCardPicture = document.createElement("div");
     menuCardPicture.classList.add("menu__card-picture");
-    menuCardPicture.style.backgroundImage = `url(${list.images.main})`
+    menuCardPicture.style.backgroundImage = `url(${eRestaurant.images.main})`
     menuCardRestaurant.appendChild(menuCardPicture);
 
     //Bottom of the restaurant card
@@ -45,13 +56,13 @@ function order(restaurantList) {
     //Name of the restaurant
     const restaurantName = document.createElement("h2");
     restaurantName.classList.add("restaurant-name");
-    restaurantName.innerHTML = list.name;
+    restaurantName.innerHTML = eRestaurant.name;
     cardBodyTitle.appendChild(restaurantName);
 
     //Type of the restaurant
     const restaurantType = document.createElement("h3");
     restaurantType.classList.add("restaurant-type");
-    restaurantType.innerHTML = list.type;
+    restaurantType.innerHTML = eRestaurant.type;
     cardBodyTitle.appendChild(restaurantType);
     
     //Container of the values of the restaurant card
@@ -62,55 +73,57 @@ function order(restaurantList) {
     //Popularity value
     const popularityValue = document.createElement("h3");
     popularityValue.classList.add("popularityValue");
-    popularityValue.innerHTML = `${"⭐️".repeat(list.popularity)}`;
+    popularityValue.innerHTML = `${"⭐️".repeat(eRestaurant.popularity)}`;
     cardBodyValue.appendChild(popularityValue);
 
     //Distance value
     const distanceValue = document.createElement("h3");
     distanceValue.classList.add("card-distance");
-    distanceValue.innerHTML = `${list.distance} min`;
+    distanceValue.innerHTML = `${eRestaurant.distance} min`;
     cardBodyValue.appendChild(distanceValue);
 
     //Price value
     const priceValue = document.createElement("h3"); 
     priceValue.classList.add("card-price");
-    priceValue.innerHTML = `${"€".repeat(list.price)}`;
+    priceValue.innerHTML = `${"€".repeat(eRestaurant.price)}`;
     cardBodyValue.appendChild(priceValue);
 
-  });
+  })
+  
+  addEventListenerToRestaurant();
+};
+
+fillRestaurant(restaurantList);
+
+
+/* ClICK BUTTON -> ORDER */
+const buttonFilterPrice = document.getElementById("price-button");
+buttonFilterPrice.addEventListener("click", function () {
+  const orderByPrice = restaurantList.sort((e1,e2)=>e1.price-e2.price);
+  fillRestaurant(orderByPrice);
 }
+);
 
-order(restaurantList);
-
-const orderByPrice = restaurantList.sort((e1,e2)=>e1.price-e2.price);
-console.log(orderByPrice);
-
-const orderByPopularity = restaurantList.sort((e1,e2)=>e2.popularity-e1.popularity);
-console.log(orderByPopularity);
-
-const orderByDistance = restaurantList.sort((e1,e2)=>e1.distance-e2.distance);
-console.log(orderByDistance);
+const buttonFilterPopularity = document.getElementById("popularity-button");
+buttonFilterPopularity.addEventListener("click", function() {
+  const orderByPopularity = restaurantList.sort((e1,e2)=>e2.popularity-e1.popularity);
+  fillRestaurant(orderByPopularity);
+}
+);
+const buttonFilterDistance = document.getElementById("distance-button");
+buttonFilterDistance.addEventListener("click", function() {
+  const orderByDistance = restaurantList.sort((e1,e2)=>e1.distance-e2.distance);
+  fillRestaurant(orderByDistance);
+}
+);
 
 /* FUNCTIONS ON CLICK */
 
 
-const resizeableElements = document.querySelectorAll('.resizeable'); // Appelle tous les elements de classe ".resizeable"
-
-
-  let currentlyResized = false; // Déclare qu'aucun élement n'est agrandit
-resizeableElements.forEach((wrapperElement) => { 
-  wrapperElement.addEventListener('click', function () { // clique sur un élement.
-    
-    if (currentlyResized) { // Est-ce qu'il y a un autre élement agrandit ?
-      currentlyResized.classList.remove('large'); // Si oui, réduit cet élement
-      wrapperElement.classList.add('large'); // Et agrandit l'élement sur lequel tu as cliqué
-    }
-
-    currentlyResized = wrapperElement; // l'élement sur lequel tu as cliqué, devient un élement agrandit
-  });
-}); 
-
-resizeableElements.forEach((wrapperElement) => {
+function addEventListenerToRestaurant ()
+{
+  const resizeableElements = document.querySelectorAll('.resizeable');  // Appelle tous les elements de classe ".resizeable"
+  resizeableElements.forEach((wrapperElement) => {
     let isFocused = false;
     let mapElement = wrapperElement.querySelector(".menu__cardMap"); 
     wrapperElement.addEventListener('click', function () { 
@@ -129,3 +142,4 @@ resizeableElements.forEach((wrapperElement) => {
 
   });
 });
+}

@@ -1,41 +1,65 @@
 /*------------------ NAV BAR------------------- */
 
-
 .nav {
   padding: 3rem;
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  background: linear-gradient(0deg, #fff8f1, #a8e063);
 }
+/*-------------LOGO HEADER ------------*/
 
 .logo {
-  width: 3rem;
-  height: auto;
-}
-
-.log-in {
-  text-align: right;
+  display: flex;
+  height: 3em;
+  width: 3.5em;
 }
 
 /* BUTTON HEADER*/
+
+.info-button {
+  display: flex;
+  flex-direction: column;
+}
 
 .info-button button {
   text-decoration: none;
   border: hidden;
   border-radius: 5px 5px 5px 5px;
-  display: flex;
   background-color: #bbe38f;
   color: black;
   border-color: rgb(117, 120, 124);
   padding-left: 5px;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 7.5em;
+  height: 1.8em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
 }
 
-#log-in button:nth-child(2) {
+.info-button #log-in-button {
+  background-color: #fff8f1;
+  color: #4b923a;
+}
+
+.info-button #log-in-button:hover {
+  background-color: #4b923a;
+  color: #fff8f1;
+  transition-duration: 0.4s;
+}
+
+.info-button #sign-up-button {
+  background-color: #4b923a;
+  color: white;
+}
+
+#log-in button {
   margin-top: 0.5em;
 }
-button {
-  margin: 0.5rem;
-}
+
 button:hover {
   opacity: 1;
 }
@@ -75,7 +99,7 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* ASPECT DU FORMULAIRE LOG-IN */
+/*---------------------------------ASPECT DU FORMULAIRE LOG-IN -----------------------------------*/
 
 .form-log-in {
   display: flex;
@@ -89,9 +113,27 @@ button:hover {
   border-radius: 10px;
 }
 
+/*--------- PARTIE DU LOGO ET TITRE--------*/
+.logo-wild-eats-form-log-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-log-in img {
+  width: 5em;
+  border-radius: 10px;
+}
+#titre-form-log-in {
+  margin-top: 0.25em;
+}
+
+/*--------- PARTIE DES CASES DU FORMULAIRE--------*/
+
 #label-email {
   display: flex;
   padding-top: 0.5em;
+  margin-top: 1em;
 }
 
 input[type="email"] {
@@ -105,6 +147,7 @@ input[type="email"] {
 
 #label-mdp {
   display: flex;
+  margin-top: 1em;
 }
 
 input[type="password"] {
@@ -116,18 +159,50 @@ input[type="password"] {
   border-radius: 8px;
 }
 
+/*--------- PARTIE CHECKBOX ET BOUTON CONNEXION--------*/
+
 #checkbox-form {
   display: flex;
+  justify-content: center;
   padding-top: 0.5em;
 }
 
+.log-in-button-in-form {
+  display: flex;
+  justify-content: center;
+}
+
+#btnFormLogIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: hidden;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #bbe38f;
+  color: black;
+  cursor: pointer;
+  margin-top: 1em;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 7em;
+  height: 1.9em;
+}
+
+.btn-se-connecter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ASPECT BUTTON FERMER*/
-#closeButton {
-  position: absolute;
-  right: 25px;
-  top: 0;
+#closeButtonLogIn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5em;
   color: #000;
-  font-size: 35px;
+  font-size: 3em;
   font-weight: bold;
 }
 
@@ -137,7 +212,7 @@ input[type="password"] {
   cursor: pointer;
 }
 
-/*------------------ FORMULAIRE SIGN-UP--------------*/
+/*-------------------------------------- FORMULAIRE SIGN-UP----------------------------------------*/
 
 /* ASPECT BOX DU FORM SIGN-UP --*/
 
@@ -176,4 +251,28 @@ input[type="password"] {
   height: 46vw;
   width: 80%;
   border-radius: 10px;
+}
+
+#titre-sign-up {
+  font-size: 2em;
+}
+
+#indication-sign-up {
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.label1 {
+  margin-top: 1em;
+}
+
+#se-rappeler {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.s-inscrire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

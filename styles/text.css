@@ -1,0 +1,15 @@
+.welcome {
+  max-width: 45ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #273d0f;
+}
+
+.description {
+  max-width: 45ch;
+  margin-inline: auto;
+  text-align: center;
+  font-weight: bold;
+}

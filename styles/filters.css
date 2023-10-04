@@ -8,6 +8,7 @@
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
+  color: #273d0f;
   border: none;
 }
 
@@ -34,11 +35,13 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   .filters button {
     width: 10rem;
   }
   .filters {
     justify-content: space-evenly;
+    margin-inline: auto;
+    max-width: 1100px;
   }
 }

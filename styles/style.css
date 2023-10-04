@@ -5,6 +5,7 @@
 @import url("footer.css");
 @import url("utils.css");
 @import url("filters.css");
+@import url("text.css");
 
 /* FONTS */
 
@@ -33,4 +34,5 @@ body {
   gap: 1rem;
   overflow-x: hidden;
   background-color: var(--clr-backgroundColor);
+  color: #273d0f;
 }

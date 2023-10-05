@@ -1,0 +1,19 @@
+@keyframes flash {
+    0% {
+      color: #F6E8EA;
+      text-shadow: 0 0 7px #F6E8EA;
+    }
+    100% {
+      color: #135A1F;
+      text-shadow: 0 0 7px #F6E8EA;
+    }
+  }
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

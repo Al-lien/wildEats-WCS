@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- SECTION HEADER CONTENANT LOGO, BOUTON D'INSCRIPTION ET UN FORMULAIRE EN POP-UP -->
+
+<section class="header">
+
+  <nav class="nav">
+    
+    <img id="nav__logo" src="./logo/logo.svg" alt="wildEats-logo" class="logo">
+      
+    <div class=" info-button">
+      <button id="sign-up-button">S'inscrire</button>
+      <button id="log-in-button">Connexion</button>
+    </div>
+
+  </nav>  
+
+      <!----------------------FORMULAIRE SIGN UP------------------------>
+      
+    <div id="idBtnSignUp" class="pop-in">
+
+      <div class="form-log-in-content">
+        
+        <form class="form-sign-up-aspect " id="idBtnSignUp"  action="">
+
+          <span class="close" id="closeButton">&times;</span>
+          <div class="form">
+          <div class="form__header">
+            <h2>Inscription</h2>
+            <p>Veuillez remplir les informations pour créer un compte.</p>
+            <hr />
+          </div>
+
+          <div class="form-column">
+                          
+            <label class="label" for="email">Email</label>
+            <input type="email" placeholder="Email" name="email" required />
+                    
+            <label class="label" for="mdp-sign-up">Mot de passe</label>
+            <input type="password"  placeholder="Password" name="mdp-sign-up" required/>
+                    
+            <label class="label" for="reecrire-mdp">Réecrire mot de passe</label>
+            <input type="password" placeholder="Password" name="reecrire-mdp" required  />
+                    
+            <div class="clickToRemember">
+              <label>
+                  <input type="checkbox" checked="checked" name="remember"/><span class="rememberMe">Se rappeler de moi</span> 
+              </label>
+            </div>
+
+            <div class="log-in-button-in-form">
+                <button class="btnFormLogIn" type="submit" class="signupbtn">S'inscrire</button>
+            </div>
+
+          </div>
+        </div>
+        </form>
+
+      </div>
+
+    </div>
+      <!--------------------- FORMULAIRE LOG-IN------------------------->
+    
+      <div id="idBtnLogIn" class="pop-in">
+
+      <div class="form-log-in-content">
+
+        <form method="post" action="" class="form-aspect">
+
+          <span class="close" id="closeButtonLogIn">&times;</span> <!-- js -->
+
+          <div class="form">
+
+            <div class="form__header">
+              <img src="./logo/wildEats-logo.svg" alt="wildEats-logo" class="logo">
+              <h2 id="titre-form-log-in">Wild Eats</h2>
+            </div>
+
+            <div class="form-column">
+
+              <label class="label" for="email">Email</label>
+              <input type="email" placeholder="Email"   name="email" id="email" required/>
+                          
+            
+              <label class="label" for="mdp">Mot de passe</label>
+              <input type="password" placeholder="Password" name="mdp" required>
+            
+
+              <div class="clickToRemember">
+                <label id="checkbox-form">
+                    <input type="checkbox" checked="checked" name="remember"/><span class="rememberMe">Se rappeler de moi</span> 
+                </label>
+              </div>
+
+              <div class="log-in-button-in-form">
+                  <button class="btnFormLogIn" type="submit">Se connecter</button>
+              </div>
+                          
+            </div>
+
+          </div>
+
+        </form> 
+
+        </div> 
+
+      </div>
+
+    </div>
+
+  
+
+</section>
+
+<form class="search__form">
+    <input class="input" type="search" placeholder="Search...">
+</form>
+
+ <!-- SECTION BOUTONS FILTRES-->
+ <section class="filters">
+
+  <button id="price-button">Prix</button>
+  <button id="popularity-button">Popularité</button>
+  <button id="distance-button">Distance</button>
+
+</section>
+
+<div class="search__title-wrapper">  
+  <h1 class="search__title">Recommended for you </h1>
+  <a class="btn">See all ></a>
+</div>
+
+
+
+<section class="overflow">
+  
+  <div id="menu__container"  class="container"> <!-- MAIN PARENT -->
+    <!-- DEBUT DU CODE JAVASCRIPT 
+
+    <article class="wrapper">
+      <main class="product restaurant">   
+        <picture class="background"></picture>
+        <div class="restaurant-infos">
+          <h1 class="title">Saint-Paul Sushi</h1>
+          <h2 class="type">Japonais</h2>
+          <p class="description">
+            <span>⭐️⭐️⭐️</span>
+            <span>1 min</span>
+            <span>€</span>
+          </p>
+        </div>
+      </main>
+
+      <main class="product map">   
+        <picture class="map__img"></picture>
+      </main>
+    </article>
+
+          FIN DU CODE JAVASCRIPT -->
+  </div>
+
+</section>
+
+  
+    <p class ="description">Ce site t'aidera à trouver un restaurant adapté à tes envies après une bonne matinée à la Wild et avant de reprendre les cours l'après-midi. Nous en avons fait une sélection des meilleurs. A toi de choisir maintenant !</p>
+
+
+    <footer class="footer">
+        <div class="logo__section">
+          <img src="./logo/wildEats-logo.svg" alt="wildEats-logo" class="logo">
+          <img src="./logo/facebook-logo.svg" alt="facebook-logo" class="logo">
+          <img src="./logo/instagram-logo.svg" alt="instagram-logo" class="logo">
+          <img src="./logo/linkedin-logo.svg" alt="" class="logo">
+          <img src="./logo/tiktok-logo.svg" alt="tiktok-logo" class="logo">
+          <img src="./logo/twitter-logo.svg" alt="twitter-logo" class="logo">
+        </div>
+        <p class="copyright">Copyright © 2023 Wild Eats. International. All Rights Reserved</p>
+      
+    </footer>
+   
+    <script src="./js/data.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+</html>

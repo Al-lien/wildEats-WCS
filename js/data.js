@@ -1,16 +1,16 @@
-const restaurantType = ["Japonais", "Libanais", "Venezuelien", "Californien", "Turc", "Français", "Africain"];
+const restaurantType = ["Japonais", "Libanais", "Venezuelien", "Californien", "Turc", "Français", "Italien"];
 
 
 let restaurantList = [
     {
-        name : "Saint-Paul Sushi",
-        type: restaurantType[0],
-        price: 1,
+        name : "Les Vieux Garçons",
+        type: restaurantType[5],
+        price: 2,
         popularity: 3,
-        distance: 1,
+        distance: 2,
         images: {
-            map: "assets/saint-paul-sushi.png",
-            main: "assets2/saint-paul-sushi-img.jpg"
+            map: "assets/les-vieux-garcons.png",
+            main: "assets2/les-vieux-garçons-img.jpg"
         }
     },
     {
@@ -69,14 +69,14 @@ let restaurantList = [
         }
     },
     {
-        name : "Les Vieux Garçons",
-        type: restaurantType[5],
-        price: 2,
+        name : "Saint-Paul Sushi",
+        type: restaurantType[0],
+        price: 1,
         popularity: 3,
-        distance: 2,
+        distance: 1,
         images: {
-            map: "assets/les-vieux-garcons.png",
-            main: "assets2/les-vieux-garçons-img.jpg"
+            map: "assets/saint-paul-sushi.png",
+            main: "assets2/saint-paul-sushi-img.jpg"
         }
     },
     {
@@ -110,6 +110,17 @@ let restaurantList = [
         images: {
             map: "assets/brasserie-georges-map.png",
             main: "assets2/brasserie-georges.jpg"
+        }
+    },
+    {
+        name : "Le Petit Canissou",
+        type: restaurantType[6],
+        price: 1,
+        popularity: 3,
+        distance: 5,
+        images: {
+            map: "assets/petit-canissou-map.png",
+            main: "assets2/petit-canissou-img.jpg"
         }
     },
     {

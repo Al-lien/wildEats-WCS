@@ -1,31 +1,19 @@
 /*------------------ NAV BAR------------------- */
 
 .nav {
-  padding: 3rem;
-  padding: 10px;
+  padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(0deg, #fff8f1, #a8e063);
+  max-width: 1100px;
+  margin-inline: auto;
 }
+
+#nav__logo {
+  width: 3rem;
+}
+
 /*-------------LOGO HEADER ------------*/
 
-.logo {
-  display: flex;
-  height: 3em;
-  width: 3.5em;
-}
-
-/*LOGO HEADER*/
-
-#logo-header {
-  flex: 1;
-}
-/*-------------LOGO HEADER ------------*/
-
-#logo-header img {
-  width: 3.5em;
-  border-radius: 0.5em;
-}
 
 /* BUTTON HEADER*/
 
@@ -35,44 +23,44 @@
 }
 
 .info-button button {
-  text-decoration: none;
-  border: hidden;
-  border-radius: 5px 5px 5px 5px;
-  color: black;
-  border-color: rgb(117, 120, 124);
-  padding-left: 5px;
-  margin-bottom: 0.5em;
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  font-weight: 600;
-  width: 7.5em;
-  height: 1.8em;
+  border: none;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+  font-size: 1rem;
+  padding: 0.25em;
+  margin: 0.25em;
 }
 
-.info-button #log-in-button {
+#log-in-button {
   background-color: #fff8f1;
   color: #4b923a;
 }
 
-.info-button #log-in-button:hover {
+#sign-up-button {
+  background-color: #4b923a;
+  color: white;
+}
+
+#sign-up-button,
+#log-in-button:hover {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+
+#log-in-button:hover {
   background-color: #4b923a;
   color: #fff8f1;
-  transition-duration: 0.4s;
 }
 
-.info-button #sign-up-button {
-  background-color: #4b923a;
-  color: #fff8f1;
+#sign-up-button:hover {
+  background-color: #fff8f1;
+  color: #4b923a;
 }
 
-#log-in button {
-  margin-top: 0.5em;
-}
-
-button:hover {
-  opacity: 1;
+#sign-up-button:hover,
+#log-in-button:hover {
+  transform: translateY(5px);
 }
 
 /*------------ AFFICHAGE POP IN----------------*/
@@ -93,41 +81,35 @@ button:hover {
 
 /* ASPECT BOX DU FORM LOG-IN--*/
 .form-aspect {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff8f1;
-  margin: 5px auto;
-  border: 1px solid #888;
-  width: 20em;
-  height: 25em;
-  border-radius: 15px;
+  max-width: 300px;
+  margin-inline: auto;
 }
 
 /*---------------------------------ASPECT DU FORMULAIRE LOG-IN -----------------------------------*/
 
-.form-log-in {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff8f1;
-  margin: 5px auto;
-  height: 25rem;
-  width: 20rem;
+.form {
   border-radius: 10px;
+  background-color: #fefefe;
+  padding: 3.5rem;
+  max-width: 300px;
+  margin-inline: auto;
 }
 
 /*--------- PARTIE DU LOGO ET TITRE--------*/
-.logo-wild-eats-form-log-in {
+.form__header{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.logo-wild-eats-form-log-in img {
+.form__header > p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.form-log-in img {
   width: 5em;
-  margin-top: 3em;
+  border-radius: 10px;
 }
 #titre-form-log-in {
   margin-top: 0.25em;
@@ -136,90 +118,67 @@ button:hover {
 /*--------- PARTIE DES CASES DU FORMULAIRE--------*/
 
 #label-email {
-  display: flex;
-  padding-top: 0.5em;
-  margin-top: 1em;
+  display: block;
+  margin: 1em 0;
 }
 
 input[type="email"] {
-  display: inline-block;
-  height: 2em;
-  width: 15rem;
-  box-sizing: border-box;
+  padding: 5px 28px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
 #label-mdp {
-  display: flex;
-  margin-top: 1em;
+  display: block;
+  margin: 1em 0;
 }
 
 input[type="password"] {
-  display: inline-block;
-  height: 2em;
+  padding: 5px 28px;
   width: 100%;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
 /*--------- PARTIE CHECKBOX ET BOUTON CONNEXION--------*/
 
-#checkbox-form input[type="checkbox"] {
-  margin-right: 0.25em;
+.clickToRemember {
+  padding: 1rem 0;
 }
 
-#checkbox-form {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 1em;
+.checkbox-form {
+  display: block;
+  margin: 1em 0;
 }
-
+.rememberMe {
+  margin-left: 1rem;
+}
 .log-in-button-in-form {
   display: flex;
   justify-content: center;
 }
 
-#btnFormLogIn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  border: hidden;
-  border-radius: 5px 5px 5px 5px;
-  background-color: #4b923a;
-  color: #fff8f1;
+.btnFormLogIn {
+  background-color: var(--clr-button);
   cursor: pointer;
-  margin-top: 1em;
-  border: 0;
-  border-radius: 4px;
-  font-weight: 600;
-  width: 12em;
-  height: 2em;
-  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1rem;
 }
 
-.btn-se-connecter-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.close {
+  position: relative;
+  font-size: 5rem;
+  left: 16rem;
+  top: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
-/* ASPECT BUTTON FERMER*/
-#closeButtonLogIn {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 0.5em;
-  color: #000;
-  font-size: 3em;
-  font-weight: bold;
-}
-
-#closeButtonLogIn:hover,
-#closeButtonLogIn:focus {
-  color: red;
+.close:hover {
+  color: var(--clr-button);
   cursor: pointer;
 }
 
@@ -228,72 +187,24 @@ input[type="password"] {
 /* ASPECT BOX DU FORM SIGN-UP --*/
 
 .form-sign-up-aspect {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff8f1;
-  margin: 5px auto;
-  border: 1px solid #888;
-  width: 20rem;
-  height: 36rem;
-  border-radius: 15px;
+  max-width: 300px;
+  margin-inline: auto;
 }
 
-.form-column-sign-up {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
+/* ASPECT DU FORMULAIRE SIGN-UP*/
 
-/* ----------ASPECT DU FORMULAIRE SIGN-UP-----------*/
-
-.logo-wild-eats-form-sign-up {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-/*----GESTION IMG TITRE ET DESCRIPTION-------*/
-
-/*----IMG------*/
-
-.logo-wild-eats-form-sign-up img {
-  height: 5em;
-  margin-top: 1em;
-}
-
-/*-----TITRES-------*/
-.logo-wild-eats-form-sign-up h1 {
+#idBtnSignUp h1 {
   text-align: center;
-  font-size: 2em;
-  margin-top: 0.25em;
+  margin-bottom: 1rem;
 }
 
 #titre-sign-up {
-  margin-top: 1em;
-  text-align: center;
-  color: darkgreen;
+  font-size: 2em;
 }
 
-/*---DESCRIPTION---*/
-
-#indication-sign-up {
-  margin-top: 1em;
-  margin-left: 1.5em;
-}
-
-/*---------------------------------------*/
-
-/*--------- PARTIE CHECKBOX ET BOUTON CONNEXION--------*/
-
-.label1 {
-  margin-top: 1em;
-}
-
-#se-rappeler {
-  text-align: center;
-  margin-top: 1em;
+.label {  
+  margin: 1em 0;
+  display: block;
 }
 
 .s-inscrire {
@@ -302,293 +213,11 @@ input[type="password"] {
   align-items: center;
 }
 
-#buttonFormSignUp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  border: hidden;
-  border-radius: 5px 5px 5px 5px;
-  background-color: #4b923a;
-  color: #fff8f1;
-  cursor: pointer;
-  margin-top: 1em;
-  border: 0;
-  border-radius: 4px;
-  font-weight: 600;
-  width: 12em;
-  height: 2em;
-  font-size: 1em;
-}
 
-/*--------------BUTTON FERMER------------------*/
+@media screen and (min-width : 700px ) {
 
-#closeButton {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 0.5em;
-  color: #000;
-  font-size: 3.2em;
-  font-weight: bold;
-}
-
-#closeButton:hover,
-#closeButton:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/*-----------------------------------------RESPONSIVE---------------------------*/
-
-@media screen and (min-width: 700px) {
-  /*------------ AFFICHAGE POP IN----------------*/
-
-  .pop-in {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
+  .info-button {
+    display: inline;
   }
-
-  /*------------------ FORMULAIRE LOG-IN--------------*/
-
-  /*---------------------------------ASPECT DU FORMULAIRE LOG-IN -----------------------------------*/
-
-  /* ASPECT BOX DU FORM LOG-IN--*/
-  .form-aspect {
-    display: flex;
-    align-items: center;
-    background-color: #fff8f1;
-    margin: 5px auto;
-    border: 1px solid #888;
-    width: 20rem;
-    height: 25rem;
-    border-radius: 15px;
-  }
-
-  /*--------- PARTIE DU LOGO ET TITRE--------*/
-  .logo-wild-eats-form-log-in {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-log-in img {
-    width: 5em;
-    margin-top: 1em;
-  }
-  #titre-form-log-in {
-    margin-top: 0.25em;
-  }
-
-  /*--------- PARTIE DES CASES DU FORMULAIRE--------*/
-
-  #label-email {
-    display: flex;
-    padding-top: 0.5em;
-    margin-top: 1em;
-  }
-
-  input[type="email"] {
-    display: inline-block;
-    height: 2em;
-    width: 15rem;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-
-  #label-mdp {
-    display: flex;
-    margin-top: 1em;
-  }
-
-  input[type="password"] {
-    display: inline-block;
-    height: 2em;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-
-  /*--------- PARTIE CHECKBOX ET BOUTON CONNEXION--------*/
-
-  #checkbox-form input[type="checkbox"] {
-    margin-right: 0.25em;
-  }
-
-  #checkbox-form {
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5em;
-  }
-
-  .log-in-button-in-form {
-    display: flex;
-    justify-content: center;
-  }
-
-  #btnFormLogIn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border: hidden;
-    border-radius: 5px 5px 5px 5px;
-    background-color: #4b923a;
-    color: #fff8f1;
-    cursor: pointer;
-    margin-top: 1em;
-    border: 0;
-    border-radius: 4px;
-    font-weight: 600;
-    width: 12em;
-    height: 2em;
-    font-size: 1em;
-  }
-
-  .btn-se-connecter-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* ASPECT BUTTON FERMER*/
-  #closeButtonLogIn {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0.5em;
-    color: #000;
-    font-size: 3em;
-    font-weight: bold;
-  }
-
-  #closeButtonLogIn:hover,
-  #closeButtonLogIn:focus {
-    color: red;
-    cursor: pointer;
-  }
-
-  /*-------------------------------------- FORMULAIRE SIGN-UP----------------------------------------*/
-
-  /* ASPECT BOX DU FORM SIGN-UP --*/
-
-  .form-sign-up-aspect {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff8f1;
-    margin: 5px auto;
-    border: 1px solid #888;
-    width: 25rem;
-    height: 36rem;
-    border-radius: 15px;
-  }
-
-  .form-column-sign-up {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  /* ----------ASPECT DU FORMULAIRE SIGN-UP-----------*/
-
-  .logo-wild-eats-form-sign-up {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  /*----GESTION IMG TITRE ET DESCRIPTION-------*/
-
-  /*----IMG------*/
-
-  .logo-wild-eats-form-sign-up img {
-    height: 5em;
-    margin-top: 1em;
-  }
-
-  /*-----TITRES-------*/
-  .logo-wild-eats-form-sign-up h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 0.25em;
-  }
-
-  #titre-sign-up {
-    margin-top: 1em;
-    text-align: center;
-    color: darkgreen;
-  }
-
-  /*---DESCRIPTION---*/
-
-  #indication-sign-up {
-    margin-top: 1em;
-    margin-left: 1.5em;
-  }
-
-  /*---------------------------------------*/
-
-  /*--------- PARTIE CHECKBOX ET BOUTON CONNEXION--------*/
-
-  .label1 {
-    margin-top: 1em;
-  }
-
-  #se-rappeler {
-    text-align: center;
-    margin-top: 1em;
-  }
-
-  .s-inscrire {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #buttonFormSignUp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border: hidden;
-    border-radius: 5px 5px 5px 5px;
-    background-color: #4b923a;
-    color: #fff8f1;
-    cursor: pointer;
-    margin-top: 1em;
-    border: 0;
-    border-radius: 4px;
-    font-weight: 600;
-    width: 12em;
-    height: 2em;
-    font-size: 1em;
-  }
-
-  /*--------------BUTTON FERMER------------------*/
-
-  #closeButton {
-    position: absolute;
-    right: 6.1em;
-    top: 0em;
-    font-size: 4em;
-    justify-content: flex-end;
-    margin-right: 0.5em;
-    color: #000;
-    font-weight: bold;
-  }
-
-  #closeButton:hover,
-  #closeButton:focus {
-    color: red;
-    cursor: pointer;
-  }
+  
 }

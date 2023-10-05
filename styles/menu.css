@@ -1,150 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
-
-
-#menu-id {
-  overflow-x: auto;
-  width: 100%;
+.overflow {
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+  }
   
-}
-.menu__container {
-  display: flex;
-  gap: 1rem;
-  width: -moz-fit-content;
-  scrollbar-width: none;
-  padding-bottom: 3rem;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.menu__cardRestaurant, 
-.menu__cardMap {
-  width: 100%;
-  height: 100%;
-  flex: 1;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: all 0.2s ease-in;
-}
-
-.menu__cardRestaurant {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.menu__card-picture, 
-.menu__card-body {
-  border-radius: 10px 10px 0 0;
-}
-
-.menu__card-picture {
-  border-radius: 10px 10px 0 0;
-  height: inherit;
+  .container {
+    display: inline-flex;
+  }
   
-}
+  .wrapper {
+    width: clamp(15rem, 70vw, 20rem);
+    margin: 0.5em;
+    transition: width 0.5s;
+  }
+  
+  .product {
+    display: grid;
+    grid-template-rows: 10rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(39,61,15, 0.2) 0px 2px 8px 0px;
+  }
 
-.menu__card-picture, 
-.menu__cardMap {
+  .restaurant {
+    margin-bottom: 1em;
+  }
+  
+  .background, .map__img {
     background-size: cover;
     background-position: center;
-}
-
-.hidden {
+  }
+  
+  .map {
+    transition: all 0.5s;
     opacity: 0;
-}
-
-.menu__card-body {
-  background: wheat;
-  border-radius: 0 0 10px 10px;
-  min-height: 35%;
-}
-
-.menu__card-body-title, 
-.menu__card-body-value {
-  height: 50%;
-  padding: 0 1em;
-}
-
-.menu__card-body-title h2 {
-  padding-top: 0.5em;
-  font-weight: 500;
-  font-size: 1rem;
-}
-.menu__card-body-title h3 {
-  font-weight: 100;
-  font-size: 0.7rem;
-}
-
-.menu__card-body-value {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  max-width: 10rem;
-}
-
-.menu__card-body-value h3 {
-  padding-bottom: 1em;
-  font-weight: 100;
-  font-size: 0.7rem;
-}
-
-
-
-/* Default size with a smooth transition */
-.resizeable {
-  min-width: 250px;
-  height: 50vh;
-}
-
-/* Larger size */
-.large {
-  width: 90vw;
-  height: 50vh;
-}
-
-
-/* @media only screen and (min-width : 500px) {
-
-  .resizeable {
-    width: 40vw;
+    height: 0;
+    overflow: hidden;
   }
   
-}
-
-@media only screen and (min-width : 700px) {
-
-  .resizeable {
-    width: 35vw;
+  .show {
+    opacity: 1;
+    height: 10rem;
+  }  
+  
+  .widden {
+    width: clamp(22rem, 90vw, 30rem );
   }
   
-}
-
-@media only screen and (min-width : 700px) {
-
-  .resizeable {
-    width: 30vw;
+  .restaurant-infos {
+    padding: 1em;
+    font-size: clamp(0.5rem, 5vw, 1rem);
   }
   
-}
-
-@media only screen and (min-width : 900px) {
-
-  .resizeable {
-    width: 25vw;
+  .restaurant-infos > .type {
+    font-size: 1em;
   }
   
-}
-
-@media only screen and (min-width : 1200px) {
-
-  .resizeable {
-    width: 20vw;
+  .restaurant-infos > .description {
+    display: flex;
+    justify-content: space-between;
+  
   }
   
-} */
+  
+  .lorem {
+    padding: 0 1em;
+    text-align: justify;
+    font-size: 1em;
+  }
+
+
+  @media screen and (min-width: 1100px) {
+
+    .container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      max-width: 1100px;
+      margin-inline: auto;
+    }
+
+    .wrapper {
+      width: 350px;
+    }
+  
+    
+  }

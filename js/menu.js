@@ -89,11 +89,14 @@ fillRestaurant(restaurantList);
 
 /* ClICK BUTTON -> ORDER */
 const buttonFilterPrice = document.getElementById("price-button");
+
 buttonFilterPrice.addEventListener("click", function () {
+
   const orderByPrice = restaurantList.sort((e1,e2)=>e1.price-e2.price);
+
   fillRestaurant(orderByPrice);
-}
-);
+
+});
 
 const buttonFilterPopularity = document.getElementById("popularity-button");
 buttonFilterPopularity.addEventListener("click", function() {

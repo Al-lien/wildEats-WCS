@@ -9,6 +9,7 @@
   font-weight: bold;
   text-align: center;
   border: none;
+  color: var(--clr-background);
 }
 
 .filters button:hover {
